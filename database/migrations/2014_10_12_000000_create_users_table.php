@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->text('token')->nullable();
             $table->string('id_token')->nullable();
             $table->tinyInteger('is_active')->default(0);
-            $table->enum('user_type',['Admin'])->default('Acudiente');
+            $table->enum('user_type',['Admin','Acudiente'])->default('Acudiente');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
